@@ -19,9 +19,6 @@
     "commit": "git-cz"
   },
   "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    },
     "cz-customizable": {
       "config": "config/.cz-config.js"
     }

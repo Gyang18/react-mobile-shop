@@ -8,6 +8,14 @@ module.exports = {
       name : '💪  WIP:      Work in progress'
     },
     {
+      value: 'components',
+      name: 'Common component related changes'
+    },
+    {
+      value: 'page',
+      name: 'page related changes'
+    },
+    {
       value: 'feat',
       name : '✨  feat:     A new feature'
     },
