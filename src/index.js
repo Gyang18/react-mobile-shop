@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Main from 'pages/Main';
+import AppRoutes from './router';
 import './styles';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Main />
-  </React.StrictMode>,
+  <AppRoutes />,
   document.getElementById('app'),
 );

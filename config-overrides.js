@@ -72,7 +72,7 @@ module.exports = {
       rootValue: 16,
       propList: ['*'],
       minPixelValue: 2,
-      selectorBlackList: ['am-'],
+      selectorBlackList: ['am-', 'layout'],
     })]),
     addCustomize(),
   ),

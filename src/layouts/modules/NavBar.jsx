@@ -1,0 +1,27 @@
+import { Icon, NavBar } from 'antd-mobile';
+import React from 'react';
+
+const NavBarHeader = ({ meta, history }) => {
+  const onLeftClick = () => {
+    history.goBack();
+  };
+  return (
+    <div className='layout-navbar'>
+      {
+          meta.isShowNavbar !== false ? (
+            <div className='layout-fixed layout-fixed-top navbar-content'>
+              <NavBar
+                mode='light'
+                icon={meta.isBack !== false ? <Icon type='left' /> : ''}
+                onLeftClick={onLeftClick}
+              >
+                { meta.title || 'yang-shop' }
+              </NavBar>
+            </div>
+          ) : <></>
+        }
+    </div>
+  );
+};
+
+export default NavBarHeader;

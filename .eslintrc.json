@@ -31,6 +31,10 @@
   },
   "rules": {
     // 使jsx语法也能在js中运行
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/prop-types": "off",
+    "react/destructuring-assignment": ["off", "always"],
+    "import/prefer-default-export": "off",
+    "jsx-quotes": ["error", "prefer-single"]
   }
 }
