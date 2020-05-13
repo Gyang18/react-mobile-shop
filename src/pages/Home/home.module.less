@@ -1,0 +1,156 @@
+@color-white: #fff;
+/* nav start */
+.homeHeader {
+  //background: #fff;
+  transition: all .4s;
+}
+.headerIcon {
+  padding: 10px;
+  color: @color-white;
+}
+.iconfont {
+  font-size: 22px;
+}
+.headerSearch {
+  height: 50px;
+  position: relative;
+  .searchInput {
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    background-color: rgba(231, 231, 231, 0.7);
+    text-align: center;
+    padding: 0 34px;
+    font-size: 16px;
+    border-radius: 16px;
+    transition: all .4s;
+  }
+  .searchIcon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
+  }
+}
+/* nav end */
+
+/* banner start */
+.homeBanner {
+  padding-top: 60px;
+  position: relative;
+  height: 225px;
+  margin-bottom: 18px;
+  .amCarousel {
+    height: 225px;
+  }
+  .bannerBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .4s;
+  }
+  .bannerSwiper {
+    height: 182px;
+  }
+  .swiperItem {
+    padding: 0 15px;
+    height: 182px;
+    overflow: hidden;
+    .swiperImg {
+      width: 100%;
+      height: 182px;
+      border-radius: 8px;
+      display: block;
+      background: #f5f5f5;
+    }
+  }
+}
+/* banner end */
+
+/* category-nav start */
+.categoryNav {
+  background-color: @color-white;
+  padding: 16px 12px;
+}
+.categoryCover {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 7px;
+  border-radius: 50%;
+  opacity: .7;
+  box-shadow: 2px 2px 11px rgba(250, 67, 106, 0.3);
+}
+.categoryTitle {
+  font-size: 14px;
+  color: #303133;
+}
+/* category-nav end */
+
+/* activity start */
+.activityContent {
+  width: 100%;
+  height: 115px;
+  overflow: hidden;
+  position: relative;
+  background-color: @color-white;
+}
+.activityImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-shadow: 2px 2px 11px rgba(250, 67, 106, 0.3);
+}
+/* activity end */
+
+/* public goods css start */
+.goodsWrapper {
+   margin-top: 15px;
+}
+.goodsTitle {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+}
+.goodsPrice {
+  color: @primary-color;
+  font-size: 18px;
+  margin-top: 10px;
+}
+/* public goods css end */
+
+/* hot goods start */
+.hotGoodsWrapper {
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  padding: 0 6px;
+  box-shadow: 2px 2px 11px rgba(190, 183, 185, 0.3);
+}
+.hotGoodsHead {
+  padding: 14px 0;
+}
+.hotGoodsItem {
+  padding-bottom: 14px;
+}
+.hotGoodsItemBottom {
+  margin-top: 6px;
+}
+.hotGoodsCoverBox {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+.hotGoodsCover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+.hotGoodsBuyBtn::before{
+  display: none;
+}
+/* hot goods end */

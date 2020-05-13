@@ -43,20 +43,17 @@ module.exports = {
       libraryName: 'antd-mobile',
       style: 'css',
     }),
-    // addLessLoader({
-    //   lessOptions: {
-    //     strictMath: true,
-    //     noIeCompat: true,
-    //     modifyVars: {},
-    //     localIdentName: "[local]--[hash:base64:5]" // if you use CSS Modules,
-    //     and custom `localIdentName`,
-    //     default is '[local]--[hash:base64:5]'.
-    //   }
-    // }),
     addLessLoader({
-      javascriptEnabled: true,
-      modifyVars: { '@primary-color': '#1DA57A' },
-      localIdentName: '[local]--[hash:base64:5]', // 自定义 CSS Modules 的 localIdentName
+      strictMath: true,
+      noIeCompat: true,
+      loader: "css-loader",
+      modifyVars: { "@primary-color": '#fa436a'},
+      options: {
+        modules: {
+          localIdentName: "[name]__[local]___[hash:base64:5]",
+        },
+        sourceMap: true
+      }
     }),
     addWebpackAlias({
       '@': path.resolve(__dirname, 'src/'),
