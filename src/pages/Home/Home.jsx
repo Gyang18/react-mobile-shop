@@ -1,9 +1,10 @@
-import { Button } from 'antd-mobile';
 import React, { Component } from 'react';
 import { homeData } from 'api/home';
 import styles from './home.module.less';
 import BannerSwiper from './modules/BannerSwiper';
 import NavHeader from './modules/NavHeader';
+import HotGoodsList from './modules/HotGoodsList';
+import RecommendGoods from './modules/RecommendGoods';
 
 class Home extends Component {
   constructor() {
@@ -13,7 +14,7 @@ class Home extends Component {
       categoryNav: [],
       activity: {},
       hotGoods: [],
-      // categoryGoods: [],
+      categoryGoods: [],
 
     };
   }
@@ -29,7 +30,7 @@ class Home extends Component {
           banner: res.data.banner,
           categoryNav: res.data.categoryNav,
           activity: res.data.activity,
-          // categoryGoods: res.data.categoryGoods,
+          categoryGoods: res.data.categoryGoods,
           hotGoods: res.data.hotGoods,
         });
       }
@@ -39,6 +40,7 @@ class Home extends Component {
   render() {
     const {
       banner, categoryNav, activity, hotGoods,
+      categoryGoods,
     } = this.state;
     return (
       <div className='home-page'>
@@ -64,48 +66,10 @@ class Home extends Component {
           <img className={styles.activityImg} src={activity.activityImg} alt='' />
         </div>
         {/*  热销商品 */}
-        <div className={`layout-white ${styles.goodsWrapper} ${styles.hotGoodsWrapper}`}>
-          <div className={styles.hotGoodsHead}>
-            <h6>热卖商品</h6>
-          </div>
-          <ul>
-            {
-              hotGoods.map((item) => (
-                <li className={styles.hotGoodsItem} key={item.id}>
-                  <div className={styles.hotGoodsCoverBox}>
-                    <img className={styles.hotGoodsCover} src={item.cover} alt='' />
-                  </div>
-                  <div className={`flex justify-between align-center ${styles.hotGoodsItemBottom}`}>
-                    <div className=''>
-                      <p className={styles.goodsTitle}>{ item.title }</p>
-                      <p className={styles.goodsPrice}>
-                        { `¥  ${item.price}` }
-                        {' '}
-                      </p>
-                    </div>
-                    <div className=''>
-                      <Button
-                        className={styles.hotGoodsBuyBtn}
-                        type='primary'
-                        size='small'
-                        inline
-                        style={{
-                          backgroundColor: '#fa436a',
-                          border: 0,
-                        }}
-                      >
-                        立即抢购
-                      </Button>
-                    </div>
-                  </div>
-                </li>
-              ))
-            }
-          </ul>
-        </div>
+        <HotGoodsList hotGoods={hotGoods} {...this.props} />
         {/*  分类精选 */}
         {/*  推荐商品 */}
-        <div className={styles.goodsWrapper} />
+        <RecommendGoods goodsList={categoryGoods} {...this.props} />
       </div>
     );
   }
